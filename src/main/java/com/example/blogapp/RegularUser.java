@@ -19,4 +19,7 @@ public class RegularUser extends User implements UserActions {
     public void deletePost(int postId) {
         System.out.println(getUsername() + " deletes post ID: " + postId);
     }
+    public void greetMethod(String name){
+        System.out.println("Greet by RegularUser  "+name);
+    }
 }
