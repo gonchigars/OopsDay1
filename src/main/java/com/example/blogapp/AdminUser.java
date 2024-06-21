@@ -22,11 +22,21 @@ public class AdminUser extends User implements AdminActions {
 
     @Override
     public void approvePost(int postId) {
-        System.out.println(getUsername() + " approves post ID: " + postId);
+        System.out.println(getUsername() + " approves posts " + postId);
     }
 
     @Override
     public void banUser(int userId) {
         System.out.println(getUsername() + " bans user ID: " + userId);
+    }
+
+    @Override
+    public void greetUser() {
+        System.out.println("Hello adminuser");
+    }
+
+    @Override
+    public void commentPost(int postId , String comment) {
+        System.out.println(getUsername() + " comments on post by admin " + postId + " with comment: " + comment);
     }
 }
