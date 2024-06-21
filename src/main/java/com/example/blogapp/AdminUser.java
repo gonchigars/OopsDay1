@@ -29,4 +29,13 @@ public class AdminUser extends User implements AdminActions {
     public void banUser(int userId) {
         System.out.println(getUsername() + " bans user ID: " + userId);
     }
+    @Override
+    public void greetFromChild() {
+        System.out.println(getUsername() + " says hello from AdminUser child method.");
+    }
+
+    @Override
+    public void functionWithParameter(String param) {
+        System.out.println(getUsername() + " executes function with parameter: " + param);
+    }
 }
