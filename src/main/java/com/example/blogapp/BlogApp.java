@@ -10,6 +10,8 @@ public class BlogApp {
         performUserActions(regularUser, "Regular Post", "This is a regular post.");
         regularUser.editPost(1, "Updated content of regular post.");
         regularUser.deletePost(1);
+        regularUser.greetUser();
+        regularUser.commentPost(1, "regular comment");
 
         // Perform actions as an admin user
         performAdminActions(adminUser, "Admin Post", "This is an admin post.");
@@ -17,6 +19,8 @@ public class BlogApp {
         adminUser.deletePost(2);
         adminUser.approvePost(2);
         adminUser.banUser(3);
+        adminUser.greetUser();
+        adminUser.commentPost(1, "admin comment");
 
         // Perform actions as a group admin
         performAdminActions(groupAdmin, "Group Post", "This is a group post.");
@@ -24,6 +28,9 @@ public class BlogApp {
         groupAdmin.deletePost(3);
         groupAdmin.approvePost(3);
         groupAdmin.banUser(4);
+        groupAdmin.greetUser();
+        groupAdmin.commentPost(1, "group comment");
+
     }
 
     public static void performUserActions(UserActions user, String title, String content) {
