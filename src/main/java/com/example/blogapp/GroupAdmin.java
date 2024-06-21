@@ -36,4 +36,10 @@ public class GroupAdmin extends User implements AdminActions {
     public String getGroupName() {
         return groupName;
     }
+    public void greetAction(){
+        System.out.println("Hello World");
+    }
+    public void commentPost(int commentId, String reply){
+        System.out.println(getUsername() + "comment post ID: " + commentId + " reply: " + reply);
+    }
 }

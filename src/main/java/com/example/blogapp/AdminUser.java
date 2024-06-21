@@ -29,4 +29,10 @@ public class AdminUser extends User implements AdminActions {
     public void banUser(int userId) {
         System.out.println(getUsername() + " bans user ID: " + userId);
     }
+    public void greetAction(){
+        System.out.println("Hello World");
+    }
+    public void commentPost(int commentId, String reply){
+        System.out.println(getUsername() + "comment post ID: " + commentId + " reply: " + reply);
+    }
 }

@@ -7,9 +7,12 @@ public class BlogApp {
         AdminActions groupAdmin = new GroupAdmin(3, "GroupAdminJoe", "joe@example.com", "Tech Group");
 
         // Perform actions as a regular user
-        performUserActions(regularUser, "Regular Post", "This is a regular post.");
+        performUserActions(regularUser, "Regular Post", "This is a regular post.\n");
         regularUser.editPost(1, "Updated content of regular post.");
         regularUser.deletePost(1);
+        regularUser.greetAction();
+        regularUser.commentPost(2, "Replying is not possible\n");
+        System.out.println("=================Reular User================\n");
 
         // Perform actions as an admin user
         performAdminActions(adminUser, "Admin Post", "This is an admin post.");
@@ -17,6 +20,9 @@ public class BlogApp {
         adminUser.deletePost(2);
         adminUser.approvePost(2);
         adminUser.banUser(3);
+        adminUser.greetAction();
+        adminUser.commentPost(3, "Replying is not possible\n");
+        System.out.println("=================AdminUser User================\n");
 
         // Perform actions as a group admin
         performAdminActions(groupAdmin, "Group Post", "This is a group post.");
@@ -24,6 +30,9 @@ public class BlogApp {
         groupAdmin.deletePost(3);
         groupAdmin.approvePost(3);
         groupAdmin.banUser(4);
+        groupAdmin.greetAction();
+        groupAdmin.commentPost(5,"Hii\n");
+        System.out.println("=================GroupAdmin User================");
     }
 
     public static void performUserActions(UserActions user, String title, String content) {
