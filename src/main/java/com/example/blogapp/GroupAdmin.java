@@ -36,4 +36,7 @@ public class GroupAdmin extends User implements AdminActions {
     public String getGroupName() {
         return groupName;
     }
+    public void greetMethod(String name){
+        System.out.println("Greet by GroupAdmin "+name);
+    }
 }

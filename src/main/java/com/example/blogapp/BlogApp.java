@@ -10,6 +10,7 @@ public class BlogApp {
         performUserActions(regularUser, "Regular Post", "This is a regular post.");
         regularUser.editPost(1, "Updated content of regular post.");
         regularUser.deletePost(1);
+        regularUser.greetMethod("Ravi");
 
         // Perform actions as an admin user
         performAdminActions(adminUser, "Admin Post", "This is an admin post.");
@@ -24,6 +25,7 @@ public class BlogApp {
         groupAdmin.deletePost(3);
         groupAdmin.approvePost(3);
         groupAdmin.banUser(4);
+        groupAdmin.greetMethod("Raghavendra");
     }
 
     public static void performUserActions(UserActions user, String title, String content) {
