@@ -17,13 +17,16 @@ public class BlogApp {
         adminUser.deletePost(2);
         adminUser.approvePost(2);
         adminUser.banUser(3);
-
+        adminUser.greetFromChild();
+        adminUser.functionWithParameter("Mahammad");
         // Perform actions as a group admin
         performAdminActions(groupAdmin, "Group Post", "This is a group post.");
         groupAdmin.editPost(3, "Updated content of group post.");
         groupAdmin.deletePost(3);
         groupAdmin.approvePost(3);
         groupAdmin.banUser(4);
+        adminUser.greetFromChild();
+        adminUser.functionWithParameter("Mahammad");
     }
 
     public static void performUserActions(UserActions user, String title, String content) {

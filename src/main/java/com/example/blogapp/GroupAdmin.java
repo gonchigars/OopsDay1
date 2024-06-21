@@ -36,4 +36,13 @@ public class GroupAdmin extends User implements AdminActions {
     public String getGroupName() {
         return groupName;
     }
+    @Override
+    public void greetFromChild() {
+        System.out.println(getUsername() + " says hello from AdminUser child method.");
+    }
+
+    @Override
+    public void functionWithParameter(String param) {
+        System.out.println(getUsername() + " executes function with parameter: " + param);
+    }
 }
